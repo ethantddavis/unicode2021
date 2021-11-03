@@ -25,7 +25,7 @@ contract RandomSwap {
     }
 
     /// @notice swapExactInputSingle swaps a fixed amount of DAI for a maximum possible amount of WETH9
-    /// using the DAI/WETH9 0.3% pool by calling `exactInputSingle` in the swap router.
+    ///using the DAI/WETH9 0.3% pool by calling `exactInputSingle` in the swap router.
     /// @dev The calling address must approve this contract to spend at least `amountIn` worth of its DAI for this function to succeed.
     /// @param amountIn The exact amount of DAI that will be swapped for WETH9.
     /// @return amountOut The amount of WETH9 received.
@@ -37,6 +37,6 @@ contract RandomSwap {
 
         // Approve the router to spend DAI.
         TransferHelper.safeApprove(DAI, address(swapRouter), amountIn);
-    }
+    } 
 
 }
