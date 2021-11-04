@@ -20,8 +20,8 @@ contract RandomSwap {
     // For this example, we will set the pool fee to 0.3%.
     uint24 public constant poolFee = 3000;
 
-    constructor(ISwapRouter _swapRouter) {
-        swapRouter = _swapRouter;
+    constructor() {
+        swapRouter = ISwapRouter(0xE592427A0AEce92De3Edee1F18E0157C05861564);
     }
 
     /// @notice swapExactInputSingle swaps a fixed amount of DAI for a maximum possible amount of WETH9
