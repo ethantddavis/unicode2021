@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Web3 from 'web3';
 import './App.css';
+import RandomSwap from './abis/RandomSwap.json';
 
 class App extends Component {
   
@@ -30,13 +31,13 @@ class App extends Component {
         console.log('eth balance in wallet ', web3.utils.fromWei(balance))
         
       } else {
-        window.alert('Please login with MetaMaks')
+        window.alert('Please login with MetaMask')
       }
   
       //in try block load contracts
       try {
-  
-  
+        const randomSwap = new web3.eth.Contract(RandomSwap.abi, "0x5FbDB2315678afecb367f032d93F642f64180aa3")
+        console.log("nothing broke?");
   
       } catch (e) {
         console.log('Error', e)
@@ -62,7 +63,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        
+        <p>right click, inspect, navigate to console</p>
       </div>
     );
   }
