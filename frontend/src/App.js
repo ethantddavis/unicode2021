@@ -36,7 +36,7 @@ class App extends Component {
   
       //in try block load contracts
       try {
-        const randomSwap = new web3.eth.Contract(RandomSwap.abi, "0x5FbDB2315678afecb367f032d93F642f64180aa3")
+        const randomSwap = new web3.eth.Contract(RandomSwap.abi, "0xC8AE47c2E3c5010550339B8da3DEE134f5088265")
         console.log("nothing broke?");
   
       } catch (e) {
