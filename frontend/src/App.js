@@ -37,6 +37,7 @@ class App extends Component {
       //in try block load contracts
       try {
         const randomSwap = new web3.eth.Contract(RandomSwap.abi, "0xC8AE47c2E3c5010550339B8da3DEE134f5088265")
+        this.setState({ swap: randomSwap })
         console.log("nothing broke?");
   
       } catch (e) {
@@ -49,6 +50,18 @@ class App extends Component {
       window.alert('Please install MetaMask')
     }
   }
+
+  async swap(amount) {
+    if (this.state.swap !== 'undefined') {
+      try {
+        console.log(this.state.account)
+        console.log(amount)
+        await this.state.swap.methods.swapExactInputSingle(amount.toString()).send( { from: this.state.account } )
+      } catch (e) {
+        console.log('Error, swap: ', e)
+      }
+    }
+  }
   
 
   constructor(props) {
@@ -57,13 +70,36 @@ class App extends Component {
       web3: 'undefined',
       account: '',
       balance: 0,
+      swap: null,
     }
   }
   
   render() {
     return (
       <div className='App'>
-        <p>right click, inspect, navigate to console</p>
+        <form onSubmit={(e) => {
+          e.preventDefault()
+          let amount = this.swapAmount.value
+          amount = amount * 10**18
+          this.swap(amount)
+        }}>
+          <div>
+            How many DAI would you like to swap?
+            <input
+              className='swapAmount'
+              id='swapAmount'
+              type='number'
+              placeholder='0.0'
+              required
+              ref={(input) => { this.swapAmount = input }}
+            />
+          </div>
+          <button type='submit' className='swapButton'>
+            Swap 
+            
+            DAI
+          </button>
+        </form>
       </div>
     );
   }

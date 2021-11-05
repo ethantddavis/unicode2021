@@ -25,6 +25,7 @@
     "hardhat": "^2.6.8"
   },
   "dependencies": {
-    "@uniswap/v3-periphery": "^1.2.1"
+    "@uniswap/v3-periphery": "^1.2.1",
+    "dotenv": "^10.0.0"
   }
 }
