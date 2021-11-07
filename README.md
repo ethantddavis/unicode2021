@@ -1,15 +1,11 @@
-# Basic Sample Hardhat Project
+# unicode2021
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+to compile contracts:
+  cd backend
+  npx hardhat compile
+  
+to run frontend:
+  cd frontend
+  npm start
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+First Ropsten Contract deployed to: 0xC8AE47c2E3c5010550339B8da3DEE134f5088265

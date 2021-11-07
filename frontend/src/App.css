@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+  background-image: linear-gradient(to bottom right, rgb(111, 0, 255), rgb(0, 216, 221));
+  height: 100vh;
+  position: relative;
+  text-shadow: 1px 1px 1px grey;
+}
+
+.content {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+}
+
+.swapButton {
+  border-radius: 25px;
+  background-color: rgb(217, 8, 245);
+  border: none;
+  width: 150px;
+  font-size: 1rem;
+  text-shadow: 1px 1px 1px grey;
+  
+}
+
+.swapButton:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgb(0, 216, 221);
+}
+
+input {
+  border: 0;
+  padding: 5px;
+  margin: 5px;
+  background: transparent;
+  width: 30px;
+  border-radius: 25px;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
