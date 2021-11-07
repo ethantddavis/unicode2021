@@ -36,7 +36,7 @@ class App extends Component {
   
       //in try block load contracts
       try {
-        const randomSwap = new web3.eth.Contract(RandomSwap.abi, "0xC8AE47c2E3c5010550339B8da3DEE134f5088265")
+        const randomSwap = new web3.eth.Contract(RandomSwap.abi, "0x4eFe03247F5bdB79b3b5A8f9F1AD0b86Bcf5F49f")
         this.setState({ swap: randomSwap })
         console.log("nothing broke?");
   
@@ -77,7 +77,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <form onSubmit={(e) => {
+        <form className='content' onSubmit={(e) => {
           e.preventDefault()
           let amount = this.swapAmount.value
           amount = amount * 10**18

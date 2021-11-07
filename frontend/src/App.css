@@ -2,6 +2,14 @@
   text-align: center;
   background-image: linear-gradient(to bottom right, rgb(111, 0, 255), rgb(0, 216, 221));
   height: 100vh;
+  position: relative;
+  text-shadow: 1px 1px 1px grey;
+}
+
+.content {
+  position: absolute;
+  top: 40%;
+  left: 35%;
 }
 
 .swapButton {
@@ -10,10 +18,13 @@
   border: none;
   width: 150px;
   font-size: 1rem;
+  text-shadow: 1px 1px 1px grey;
+  
 }
 
 .swapButton:hover {
   cursor: pointer;
+  box-shadow: 1px 1px 1px rgb(0, 216, 221);
 }
 
 input {
