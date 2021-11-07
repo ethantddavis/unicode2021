@@ -13,8 +13,8 @@ contract RandomSwap {
     // This example swaps DAI/WETH9 for single path swaps and DAI/USDC/WETH9 for multi path swaps.
     ISwapRouter public immutable swapRouter;
 
-    address public constant DAI = 0xad6d458402f60fd3bd25163575031acdce07538d;
-    address public constant WETH = 0xc778417e063141139fce010982780140aa0cd5ab;
+    address public constant DAI = 0xaD6D458402F60fD3Bd25163575031ACDce07538D;
+    address public constant WETH = 0xc778417E063141139Fce010982780140Aa0cD5Ab;
 
     // For this example, we will set the pool fee to 0.3%.
     uint24 public constant poolFee = 3000;
@@ -42,7 +42,7 @@ contract RandomSwap {
         ISwapRouter.ExactInputSingleParams memory params =
             ISwapRouter.ExactInputSingleParams({
                 tokenIn: DAI,
-                tokenOut: WETH9,
+                tokenOut: WETH,
                 fee: poolFee,
                 recipient: msg.sender,
                 deadline: block.timestamp,
