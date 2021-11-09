@@ -83,9 +83,10 @@ class App extends Component {
           amount = amount * 10**18
           this.swap(amount)
         }}>
-          <div>
+          <div className='header'>
             How many DAI would you like to swap?
-            <input
+          </div>
+          <div><input
               className='swapAmount'
               id='swapAmount'
               type='number'
@@ -95,9 +96,7 @@ class App extends Component {
             />
           </div>
           <button type='submit' className='swapButton'>
-            Swap 
-            
-            DAI
+            Swap
           </button>
         </form>
       </div>

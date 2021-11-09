@@ -3,23 +3,52 @@
   background-image: linear-gradient(to bottom right, rgb(111, 0, 255), rgb(0, 216, 221));
   height: 100vh;
   position: relative;
-  text-shadow: 1px 1px 1px grey;
 }
 
 .content {
   position: absolute;
-  top: 40%;
-  left: 35%;
+  top: 30%;
+  left: 38%;
+}
+
+.header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px grey;
+}
+
+.swapAmount {
+  text-align: right;
+  margin: auto;
+  margin-top: 20px;
+  padding: 7px;
+  border: 1px solid #cdcdcd;
+  border-spacing: 2px;
+  border-radius: 14px;
+  border-color: lightgray;
+  background-color: rgb(35, 93, 218);
+  width: 150px;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
 }
 
 .swapButton {
-  border-radius: 25px;
-  background-color: rgb(217, 8, 245);
-  border: none;
-  width: 150px;
-  font-size: 1rem;
-  text-shadow: 1px 1px 1px grey;
-  
+  cursor: pointer;
+  background-image: linear-gradient(to bottom right, rgb(111, 0, 101), rgb(161, 0, 151));
+  color: whitesmoke;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 2px;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  border: 2;
+  border-color: whitesmoke;
+  border-radius: 26px;
+  width: 250px;
 }
 
 .swapButton:hover {
