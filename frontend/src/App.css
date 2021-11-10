@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-image: linear-gradient(to bottom right, rgb(111, 0, 255), rgb(0, 216, 221));
+  background-image: linear-gradient(to top, rgb(46,36,45), rgb(35,65,90));
   height: 100vh;
   position: relative;
 }
@@ -12,6 +12,15 @@
 }
 
 .header {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(226, 119, 189);
+  text-shadow: 2px 2px 2px rgb(35,65,90);
+}
+
+.bio {
   text-align: center;
   font-size: 24px;
   font-weight: 600;
@@ -28,7 +37,7 @@
   border-spacing: 2px;
   border-radius: 14px;
   border-color: lightgray;
-  background-color: rgb(35, 93, 218);
+  background-image:  linear-gradient(to top, rgb(46,36,45), rgb(27, 38, 49));;
   width: 150px;
   font-size: 20px;
   font-weight: 600;
@@ -37,7 +46,7 @@
 
 .swapButton {
   cursor: pointer;
-  background-image: linear-gradient(to bottom right, rgb(111, 0, 101), rgb(161, 0, 151));
+  background-image: linear-gradient(to bottom, rgb(239,24,164), rgb(27, 38, 49));
   color: whitesmoke;
   margin: auto;
   margin-top: 20px;
@@ -50,6 +59,25 @@
   border-radius: 26px;
   width: 250px;
 }
+
+/* still trying to implement .walletButton in app.js 
+*/
+.walletButton {
+  cursor: pointer;
+  background-image: linear-gradient(to bottom right, rgb(26, 82, 118), rgb(27, 38, 49));
+  color: whitesmoke;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 2px;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  border: 2;
+  border-color: whitesmoke;
+  border-radius: 26px;
+  width: 250px;
+}
+
 
 .swapButton:hover {
   cursor: pointer;
