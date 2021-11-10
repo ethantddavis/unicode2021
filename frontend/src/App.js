@@ -19,7 +19,7 @@ class App extends Component {
   
       //metamask popup
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-      console.log('your account ', accounts[0])
+      console.log('your account ', accounts[0]);
       const netId = await ethereum.request({ method: 'net_version' });
       console.log('network id ', netId)
       
@@ -82,24 +82,27 @@ class App extends Component {
           let amount = this.swapAmount.value
           amount = amount * 10**18
           this.swap(amount)
-        }}>
-          <div className='header'>
-            How many DAI would you like to swap?
-          </div>
-          <div><input
-              className='swapAmount'
-              id='swapAmount'
-              type='number'
-              placeholder='0.0'
-              required
-              ref={(input) => { this.swapAmount = input }}
-            />
-          </div>
-          <button type='submit' className='swapButton'>
-            Swap
-          </button>
-        </form>
-      </div>
+         }}>
+           <div className='header'>
+            AccidentalSwap
+            </div>
+            <div className='bio'>
+              How many DAI would you like to swap?
+            </div>
+            <div><input
+                className='swapAmount'
+                id='swapAmount'
+                type='number'
+                placeholder='0.0'
+                required
+                ref={(input) => { this.swapAmount = input }}
+              />
+            </div>
+            <button type='submit' className='swapButton'>
+              Swap
+            </button>
+      </form>
+    </div>
     );
   }
 }
