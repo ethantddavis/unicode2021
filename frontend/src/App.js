@@ -86,25 +86,27 @@ class App extends Component {
           let amount = this.swapAmount.value
           amount = amount * 10**18
           this.swap(amount)
-        }}>
-          <div>
-            How many DAI would you like to swap?
-            <input
-              className='swapAmount'
-              id='swapAmount'
-              type='number'
-              placeholder='0.0'
-              required
-              ref={(input) => { this.swapAmount = input }}
-            />
-          </div>
-          <button type='submit' className='swapButton'>
-            Swap 
-            
-            DAI
-          </button>
-        </form>
-      </div>
+         }}>
+           <div className='header'>
+            AccidentalSwap
+            </div>
+            <div className='bio'>
+              How many DAI would you like to swap?
+            </div>
+            <div><input
+                className='swapAmount'
+                id='swapAmount'
+                type='number'
+                placeholder='0.0'
+                required
+                ref={(input) => { this.swapAmount = input }}
+              />
+            </div>
+            <button type='submit' className='swapButton'>
+              Swap
+            </button>
+      </form>
+    </div>
     );
   }
 }
