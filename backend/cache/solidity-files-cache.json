@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\Ethan Davis\\Documents\\Files\\ETHOnline\\unicode\\unicode2021\\backend\\contracts\\RandomSwap.sol": {
-      "lastModificationDate": 1636305322580,
-      "contentHash": "08c338db66af218b94e3f8a840adb9b1",
+      "lastModificationDate": 1640883850183,
+      "contentHash": "b9a86831ac55267b4f513298a312bc53",
       "sourceName": "contracts/RandomSwap.sol",
       "solcConfig": {
         "version": "0.7.6",
@@ -29,8 +29,7 @@
         }
       },
       "imports": [
-        "@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol",
-        "@uniswap/v3-periphery/contracts/libraries/TransferHelper.sol"
+        "@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol"
       ],
       "versionPragmas": [
         ">=0.7.6"
