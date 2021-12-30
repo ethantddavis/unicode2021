@@ -3,9 +3,13 @@
 to compile contracts:
   cd backend
   npx hardhat compile
+
+to deploy contracts:
+  cd backend
+  npx hardhat run --network kovan scripts/deploy.js
   
 to run frontend:
   cd frontend
   npm start
 
-First Ropsten Contract deployed to: 0xC8AE47c2E3c5010550339B8da3DEE134f5088265
+Kovan Contract deployed to: 0x62Bb2142A967955637dD784d45aB454Fcdd3d443

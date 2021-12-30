@@ -1,3 +1,6 @@
+quit
+exit
+que
 signer = provider.getSigner()
 provider = new ethers.providers.InfuraProvider('ropsten')
 signer = provider.getSigner()
