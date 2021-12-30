@@ -1,0 +1,194 @@
+signer = provider.getSigner()
+provider = new ethers.providers.InfuraProvider('ropsten')
+signer = provider.getSigner()
+provider = new ethers.providers.AlchemyProvider('ropsten')
+provider = provider.AlchemyProvider('ropsten')
+provider
+signer = provider.getSigner()
+tx = contract.swapExactInputSingle(1 * 10**18).send({ senderAddress })
+senderAddress = accounts[0]
+tx = contract.swapExactInputSingle(1 * 10**18).send({ accounts[0] })
+tx = await contract.swapExactInputSingle(1 * 10**18).send({ accounts[0] })
+tx = await contract.swapExactInputSingle(1 * 10**18)
+tx = contract.swapExactInputSingle(1 * 10**18)
+contract.DAI
+contract = new ethers.Contract(address, abi, provider)
+contract = ethers.Contract(address, abi, provider)
+address = "0x4eFe03247F5bdB79b3b5A8f9F1AD0b86Bcf5F49f"
+provider = ethers.getDefaultProvider()
+  ]
+    }
+      "type": "function"
+      "stateMutability": "view",
+      ],
+        }
+          "type": "address"
+          "name": "",
+          "internalType": "contract ISwapRouter",
+        {
+      "outputs": [
+      "name": "swapRouter",
+      "inputs": [],
+    {
+    },
+      "type": "function"
+      "stateMutability": "nonpayable",
+      ],
+        }
+          "type": "uint256"
+          "name": "amountOut",
+          "internalType": "uint256",
+        {
+      "outputs": [
+      "name": "swapExactInputSingle",
+      ],
+        }
+          "type": "uint256"
+          "name": "amountIn",
+          "internalType": "uint256",
+        {
+      "inputs": [
+    {
+    },
+      "type": "function"
+      "stateMutability": "view",
+      ],
+        }
+          "type": "uint24"
+          "name": "",
+          "internalType": "uint24",
+        {
+      "outputs": [
+      "name": "poolFee",
+      "inputs": [],
+    {
+    },
+      "type": "function"
+      "stateMutability": "view",
+      ],
+        }
+          "type": "address"
+          "name": "",
+          "internalType": "address",
+        {
+      "outputs": [
+      "name": "WETH",
+      "inputs": [],
+    {
+    },
+      "type": "function"
+      "stateMutability": "view",
+      ],
+        }
+          "type": "address"
+          "name": "",
+          "internalType": "address",
+        {
+      "outputs": [
+      "name": "DAI",
+      "inputs": [],
+    {
+    },
+      "type": "constructor"
+      "stateMutability": "nonpayable",
+      "inputs": [],
+    {
+abi = [
+accounts = await ethers.provider.listAccounts()
+contract = new ethers.Contract(address, abi, provider)
+address = "0x4eFe03247F5bdB79b3b5A8f9F1AD0b86Bcf5F49f"
+contract = new ethers.Contract(address, abi, provider)
+let contract = new ethers.Contract(address, abi, provider)
+address = BigInt(0x4eFe03247F5bdB79b3b5A8f9F1AD0b86Bcf5F49f)
+contract = new ethers.Contract(0x4eFe03247F5bdB79b3b5A8f9F1AD0b86Bcf5F49f, abi, provider)
+let contract = new ethers.Contract(0x4eFe03247F5bdB79b3b5A8f9F1AD0b86Bcf5F49f, abi, provider)
+contract
+let contract = new ethers.Contract(contractAddress, abi, provider)
+contractAddress = 0x4eFe03247F5bdB79b3b5A8f9F1AD0b86Bcf5F49f
+provider = ethers.getDefaultProvider()
+abi
+  ]
+    }
+      "type": "function"
+      "stateMutability": "view",
+      ],
+        }
+          "type": "address"
+          "name": "",
+          "internalType": "contract ISwapRouter",
+        {
+      "outputs": [
+      "name": "swapRouter",
+      "inputs": [],
+    {
+    },
+      "type": "function"
+      "stateMutability": "nonpayable",
+      ],
+        }
+          "type": "uint256"
+          "name": "amountOut",
+          "internalType": "uint256",
+        {
+      "outputs": [
+      "name": "swapExactInputSingle",
+      ],
+        }
+          "type": "uint256"
+          "name": "amountIn",
+          "internalType": "uint256",
+        {
+      "inputs": [
+    {
+    },
+      "type": "function"
+      "stateMutability": "view",
+      ],
+        }
+          "type": "uint24"
+          "name": "",
+          "internalType": "uint24",
+        {
+      "outputs": [
+      "name": "poolFee",
+      "inputs": [],
+    {
+    },
+      "type": "function"
+      "stateMutability": "view",
+      ],
+        }
+          "type": "address"
+          "name": "",
+          "internalType": "address",
+        {
+      "outputs": [
+      "name": "WETH",
+      "inputs": [],
+    {
+    },
+      "type": "function"
+      "stateMutability": "view",
+      ],
+        }
+          "type": "address"
+          "name": "",
+          "internalType": "address",
+        {
+      "outputs": [
+      "name": "DAI",
+      "inputs": [],
+    {
+    },
+      "type": "constructor"
+      "stateMutability": "nonpayable",
+      "inputs": [],
+    {
+abi = [
+deployedJson = artifacts/contracts/RandomSwap.json
+deployedJson = ./artifacts/contracts/RandomSwap.json
+(await ethers.provider.getBalance(accounts[0]))
+accounts = await ethers.provider.listAccounts()
+.exit
+ethers
+.exit

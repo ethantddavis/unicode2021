@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Web3 from 'web3';
 import './App.css';
 import RandomSwap from './abis/RandomSwap.json';
+import { ChainId, Fetcher, WETH, Route, Trade, TokenAmount, TradeType } from '@uniswap/sdk';
 
 class App extends Component {
   
@@ -19,16 +20,18 @@ class App extends Component {
   
       //metamask popup
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-      console.log('your account ', accounts[0]);
+      //console.log('your account ', accounts[0])
       const netId = await ethereum.request({ method: 'net_version' });
       console.log('network id ', netId)
+      const chainId = await web3.eth.getChainId();
+      console.log('chain id', chainId);
       
       
       //check if account is detected, then load balance&setStates, else push alert
       if (typeof accounts[0] !== 'undefined') {
         const balance = await ethereum.request({ method: "eth_getBalance", params: [accounts[0]] })
         this.setState({ account: accounts[0], balance: balance, web3: web3 })
-        console.log('eth balance in wallet ', web3.utils.fromWei(balance))
+        //console.log('eth balance in wallet ', web3.utils.fromWei(balance))
         
       } else {
         window.alert('Please login with MetaMask')
@@ -36,9 +39,11 @@ class App extends Component {
   
       //in try block load contracts
       try {
+        const daiAddress = "0xaD6D458402F60fD3Bd25163575031ACDce07538D";
+        const dai = await Fetcher.fetchTokenData(chainId, tokenAddress, )
         const randomSwap = new web3.eth.Contract(RandomSwap.abi, "0x4eFe03247F5bdB79b3b5A8f9F1AD0b86Bcf5F49f")
         this.setState({ swap: randomSwap })
-        console.log("nothing broke?");
+        //console.log("nothing broke?");
   
       } catch (e) {
         console.log('Error', e)
@@ -54,8 +59,7 @@ class App extends Component {
   async swap(amount) {
     if (this.state.swap !== 'undefined') {
       try {
-        console.log(this.state.account)
-        console.log(amount)
+        //console.log(amount)
         await this.state.swap.methods.swapExactInputSingle(amount.toString()).send( { from: this.state.account } )
       } catch (e) {
         console.log('Error, swap: ', e)
