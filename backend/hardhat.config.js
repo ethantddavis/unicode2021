@@ -21,7 +21,11 @@ module.exports = {
   solidity: "0.7.6",
   networks: {
     ropsten: {
-      url: process.env.STAGING_ALCHEMY_KEY,
+      url: process.env.ROPSTEN_ALCHEMY_KEY,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+    kovan: {
+      url: process.env.KOVAN_ALCHEMY_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
   },
