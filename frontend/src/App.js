@@ -39,8 +39,8 @@ class App extends Component {
   
       //in try block load contracts
       try {
-        const daiAddress = "0xaD6D458402F60fD3Bd25163575031ACDce07538D";
-        const dai = await Fetcher.fetchTokenData(chainId, tokenAddress, )
+        const daiAddress = this.state.tokenAddresses.dai;
+        const dai = await Fetcher.fetchTokenData(chainId, daiAddress)
         const randomSwap = new web3.eth.Contract(RandomSwap.abi, "0x62Bb2142A967955637dD784d45aB454Fcdd3d443")
         this.setState({ swap: randomSwap })
         //console.log("nothing broke?");
@@ -60,7 +60,10 @@ class App extends Component {
     if (this.state.swap !== 'undefined') {
       try {
         //console.log(amount)
-        await this.state.swap.methods.swapExactInputSingle(amount.toString()).send( { from: this.state.account } )
+        await this.state.swap.methods.convertExactEthTo(this.state.tokenAddresses.dai).send({ 
+          from: this.state.account, 
+          value: amount
+        })
       } catch (e) {
         console.log('Error, swap: ', e)
       }
@@ -75,6 +78,11 @@ class App extends Component {
       account: '',
       balance: 0,
       swap: null,
+      tokenAddresses: {
+        dai: '0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa',
+        rai: '',
+        weth: '',
+      },
     }
   }
   
@@ -91,12 +99,13 @@ class App extends Component {
             AccidentalSwap
             </div>
             <div className='bio'>
-              How many DAI would you like to swap?
+              How much ETH would you like to swap?
             </div>
             <div><input
                 className='swapAmount'
                 id='swapAmount'
                 type='number'
+                step='0.00000001'
                 placeholder='0.0'
                 required
                 ref={(input) => { this.swapAmount = input }}
