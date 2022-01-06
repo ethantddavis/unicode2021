@@ -89,33 +89,34 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <form className='content' onSubmit={(e) => {
+        <div className='header'>
+          AccidentalSwap
+        </div>
+        <form className='swapForm' onSubmit={(e) => {
           e.preventDefault()
           let amount = this.swapAmount.value
           amount = amount * 10**18
           this.swap(amount)
-         }}>
-           <div className='header'>
-            AccidentalSwap
-            </div>
-            <div className='bio'>
-              How much ETH would you like to swap?
-            </div>
-            <div><input
-                className='swapAmount'
-                id='swapAmount'
-                type='number'
-                step='0.00000001'
-                placeholder='0.0'
-                required
-                ref={(input) => { this.swapAmount = input }}
-              />
-            </div>
+        }}>
+          <div className='bio'>
+            How much ETH would you like to swap?
+          </div>
+          <div className='input'>
+            <input
+              className='swapAmount'
+              id='swapAmount'
+              type='number'
+              step='0.00000001'
+              placeholder='0.0'
+              required
+              ref={(input) => { this.swapAmount = input }}
+            />
             <button type='submit' className='swapButton'>
               Swap
             </button>
-      </form>
-    </div>
+          </div>
+        </form>
+      </div>
     );
   }
 }

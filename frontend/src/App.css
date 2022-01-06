@@ -2,43 +2,46 @@
   text-align: center;
   background-image: linear-gradient(to top, rgb(46,36,45), rgb(35,65,90));
   height: 100vh;
-  position: relative;
-}
-
-.content {
-  position: absolute;
-  top: 30%;
-  left: 38%;
+  position: relative; /* needed to center swap */
 }
 
 .header {
-  text-align: center;
-  margin-bottom: 12px;
-  font-size: 40px;
+  font-size: 60px;
   font-weight: 600;
-  color: rgb(226, 119, 189);
-  text-shadow: 2px 2px 2px rgb(35,65,90);
+  color: rgb(243, 98, 192);
+  text-shadow: 2px 2px 2px black;
+}
+
+.swapForm {
+  position: absolute; 
+  left: 50%; /* left edge 50% of parent width */
+  top: 50%; /* top edge 50% of parent height */
+  transform: translate(-50%, -50%); /* move to actual center */
 }
 
 .bio {
-  text-align: center;
   font-size: 24px;
   font-weight: 600;
   color: #ffffff;
-  text-shadow: 1px 1px 1px grey;
+  text-shadow: 1px 1px 1px black;
+  margin-bottom: 25px;
+}
+
+.input {
+  display: flex;
+  justify-content: space-around;
+  width: 250px;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 .swapAmount {
   text-align: right;
-  margin: auto;
-  margin-top: 20px;
-  padding: 7px;
-  border: 1px solid #cdcdcd;
-  border-spacing: 2px;
+  border: 1px solid grey;
   border-radius: 14px;
-  border-color: lightgray;
   background-image:  linear-gradient(to top, rgb(46,36,45), rgb(27, 38, 49));;
-  width: 150px;
+  width: 100px;
   font-size: 20px;
   font-weight: 600;
   color: rgb(255, 255, 255);
@@ -48,16 +51,15 @@
   cursor: pointer;
   background-image: linear-gradient(to bottom, rgb(239,24,164), rgb(27, 38, 49));
   color: whitesmoke;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 2px;
-  padding: 12px;
   font-size: 20px;
   font-weight: 500;
-  border: 2;
-  border-color: whitesmoke;
-  border-radius: 26px;
-  width: 250px;
+  border: 1px solid grey;
+  border-radius: 14px;
+  width: 100px;
+}
+
+.swapButton:hover {
+  cursor: pointer;
 }
 
 /* still trying to implement .walletButton in app.js 
@@ -78,22 +80,26 @@
   width: 250px;
 }
 
-
-.swapButton:hover {
-  cursor: pointer;
-  box-shadow: 1px 1px 1px rgb(0, 216, 221);
-}
-
-input {
-  border: 0;
-  padding: 5px;
-  margin: 5px;
-  background: transparent;
-  width: 30px;
-  border-radius: 25px;
-}
-
+/* remove increment arrows in number input */
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+/* alternate format for small screen */
+@media (max-height: 450px), (max-width: 450px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    font-size: 45px;
+  }
+  .swapForm {
+    position: relative;
+    top: 80px;
+  }
+  .bio {
+    font-size: 18;
+  }
 }
